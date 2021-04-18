@@ -30,3 +30,16 @@ while True:
         else:
             print("You win!")
             player_score+=1
+    elif player == 'E':
+        print("Final Score:")
+        print("Cpu Score:", cpu_score)
+        print("Player Score:", player_score)
+        if player_score > cpu_score:
+            print("You have Won with a total of {} rounds".format(player_score))
+        elif player_score == cpu_score:
+            print("It's a tie with both having won {} rounds".format(player_score))
+        else:
+            print("The computer has won with a total of {} rounds".format(cpu_score))
+        break
+    else:
+        print("Invalid input!")
