@@ -38,7 +38,18 @@ def pause():
 def resume():
     pygame.mixer.music.unpause()
 
-Button1 = tk.Button(music_player, width=5, height=3, font=”Helvetica 15 bold”, text=”PLAY”, command=play, bg=”blue”, fg=”white”)
-Button2 = tk.Button(music_player, width=5, height=3, font=”Helvetica 15 bold”, text=”STOP”, command=stop, bg=”red”, fg=”white”)
-Button3 = tk.Button(music_player, width=5, height=3, font=”Helvetica 15 bold”, text=”PAUSE”, command=pause, bg=”purple”, fg=”white”)
-Button4 = tk.Button(music_player, width=5, height=3, font=”Helvetica 15 bold”, text=”RESUME”, command=unpause, bg=”orange”, fg=”white”)   
+Button1 = tk.Button(music_player, width=5, height=3, font='Helvetica 15 bold', text='PLAY', command=play, bg='blue', fg='white')
+Button2 = tk.Button(music_player, width=5, height=3, font='Helvetica 15 bold', text='STOP', command=stop, bg='red', fg='white')
+Button3 = tk.Button(music_player, width=5, height=3, font='Helvetica 15 bold', text='PAUSE', command=pause, bg='purple', fg='white')
+Button4 = tk.Button(music_player, width=5, height=3, font='Helvetica 15 bold', text='RESUME', command=unpause, bg='orange', fg='white')   
+
+var = tk.StringVar()
+song_title = tk.Label(mp3_player, font="Helvetica 15 bold", textVariable=var)
+
+song_title.pack()
+Button1.pack(fill='x')
+Button2.pack(fill='x')
+Button3.pack(fill='x')
+Button4.pack(fill='x')
+playlist.pack(fill='both', expand='yes')
+mp3_player.mainloop()
