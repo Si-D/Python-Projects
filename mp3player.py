@@ -8,8 +8,11 @@ mp3_player = tk.Tk()
 mp3_player.title("Music - The Antidote")
 mp3_player.geometry("500x400")
 
+
 dir = askdirectory()
-os.chdir(dir)
+dir = os.path.abspath(dir)
+#os.chdir(dir)
+#dirpath = os.path.basename(os.getcwd())
 song_list = os.listdir()
 
 playlist = tk.Listbox(mp3_player, font="Helvetica 15 bold", bg="green", selectmode=tk.SINGLE)
