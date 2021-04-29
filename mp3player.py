@@ -22,3 +22,23 @@ for i in song_list:
 pygame.init()
 pygame.mixer.init()
 
+#Music player functions
+
+def play():
+    pygame.mixer.music.load(playlist.get(tk.ACTIVE))
+    var.set(playlist.get(tk.ACTIVE))
+    pygame.mixer.music.play()
+
+def stop():
+    pygame.mixer.music.stop()
+
+def pause():
+    pygame.mixer.music.pause()
+
+def resume():
+    pygame.mixer.music.unpause()
+
+Button1 = tk.Button(music_player, width=5, height=3, font=”Helvetica 15 bold”, text=”PLAY”, command=play, bg=”blue”, fg=”white”)
+Button2 = tk.Button(music_player, width=5, height=3, font=”Helvetica 15 bold”, text=”STOP”, command=stop, bg=”red”, fg=”white”)
+Button3 = tk.Button(music_player, width=5, height=3, font=”Helvetica 15 bold”, text=”PAUSE”, command=pause, bg=”purple”, fg=”white”)
+Button4 = tk.Button(music_player, width=5, height=3, font=”Helvetica 15 bold”, text=”RESUME”, command=unpause, bg=”orange”, fg=”white”)   
