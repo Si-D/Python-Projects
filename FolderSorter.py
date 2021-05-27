@@ -1,7 +1,7 @@
 import os
 import shutil
 
-path = 'C:/Users/admin/Downloads'
+path = 'C:/Users/admin/Downloads'   #file directory to be sorted
 
 list_ = os.listdir(path)
 
